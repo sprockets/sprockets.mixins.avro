@@ -26,14 +26,6 @@ install_requires = read_requirements_file('requirements.txt')
 setup_requires = read_requirements_file('setup-requirements.txt')
 tests_require = read_requirements_file('test-requirements.txt')
 
-if sys.version_info < (2, 7):
-    tests_require.append('unittest2')
-if sys.version_info < (3, 0):
-    install_requires.append('avro')
-    tests_require.append('mock')
-else:
-    install_requires.append('avro-python3')
-
 setuptools.setup(
     name='sprockets.mixins.avro',
     version=sprockets.mixins.avro.__version__,
@@ -52,21 +44,15 @@ setuptools.setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
-    packages=['sprockets',
-              'sprockets.mixins'],
+    packages=['sprockets', 'sprockets.mixins'],
     package_data={'': ['LICENSE', 'README.md']},
     include_package_data=True,
-    namespace_packages=['sprockets',
-                        'sprockets.mixins'],
+    namespace_packages=['sprockets', 'sprockets.mixins'],
     install_requires=install_requires,
     setup_requires=setup_requires,
     tests_require=tests_require,
