@@ -90,7 +90,8 @@ class AvroConsumerTests(unittest.TestCase):
         self.assertTrue(consumer.body is first_body)
 
     def test_that_unicode_message_works(self):
-        consumer = ConcreteConsumer(self.get_avro_binary(u'm\u4e35', 'me@foo.com'),
-                                    'application/vnd.apache.avro.datum')
+        consumer = ConcreteConsumer(
+            self.get_avro_binary(u'm\u4e35', 'me@foo.com'),
+            'application/vnd.apache.avro.datum')
         consumer.prepare()
         self.assertEqual(consumer.body['name'], u'm\u4e35')
