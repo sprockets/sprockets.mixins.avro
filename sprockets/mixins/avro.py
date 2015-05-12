@@ -7,7 +7,7 @@ except ImportError:  # pragma: no cover
 
 try:
     import avro.io
-except ImportError:
+except ImportError:  # pragma: no cover
     pass  # valid from setup.py
 
 
