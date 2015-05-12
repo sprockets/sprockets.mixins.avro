@@ -6,4 +6,4 @@ Version History
     The mix in is built for use with the rejected framework.
 
 
-.. _1.0.0: https://github.com/sprockets/0.0.0...1.0.0
+.. _1.0.0: https://github.com/sprockets/sprockets.mixins.avro/compare/0.0.0...1.0.0
