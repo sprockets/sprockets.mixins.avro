@@ -33,7 +33,7 @@ setuptools.setup(
     url='https://github.com/sprockets/sprockets.mixins.avro.git',
     author='Dave Shawley',
     author_email='daves@aweber.com',
-    license=codecs.open('LICENSE', encoding='utf-8').read(),
+    license='BSD',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
