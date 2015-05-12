@@ -43,8 +43,8 @@ See https://github.com/sprockets/sprockets.mixins.avro/blob/master/HISTORY.rst
 .. |Status| image:: https://travis-ci.org/sprockets/sprockets.mixins.avro.svg?branch=master
    :target: https://travis-ci.org/sprockets/sprockets.mixins.avro
 
-.. |Coverage| image:: https://img.shields.io/coveralls/sprockets/sprockets.mixins.avro.svg?
-   :target: https://coveralls.io/r/sprockets/sprockets.mixins.avro
+.. |Coverage| image:: http://codecov.io/github/sprockets/sprockets.mixins.avro/coverage.svg?branch=master
+   :target: https://codecov.io/github/sprockets/sprockets.mixins.avro?branch=master
 
 .. |Downloads| image:: https://pypip.in/d/sprockets.mixins.avro/badge.svg?
    :target: https://pypi.python.org/pypi/sprockets.mixins.avro
