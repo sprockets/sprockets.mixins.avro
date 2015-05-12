@@ -7,7 +7,6 @@ needs_sphinx = '1.0'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
-    'sphinxcontrib.httpdomain',
 ]
 templates_path = []
 source_suffix = '.rst'
@@ -24,6 +23,6 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 intersphinx_mapping = {
     'python': ('https://docs.python.org/', None),
-    'requests': ('https://requests.readthedocs.org/en/latest/', None),
+    'rejected': ('https://rejected.readthedocs.org/en/latest/', None),
     'sprockets': ('https://sprockets.readthedocs.org/en/latest/', None),
 }

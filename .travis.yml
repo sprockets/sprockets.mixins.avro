@@ -1,13 +1,8 @@
-%YAML 1.1
----
 language: python
 python:
   - 2.6
   - 2.7
   - pypy
-  - 3.2
-  - 3.3
-  - 3.4
 install:
   - if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install unittest2; fi
   - pip install -r test-requirements.txt coveralls
@@ -15,3 +10,13 @@ install:
 script: nosetests
 after_success:
   - coveralls
+deploy:
+  provider: pypi
+  user: sprockets
+  password:
+    secure: 02suxXeo00vEvsTs8OZWyaH7lJ7Ph1kY9LhYta8K7xnvVRYkfkHDEIzN5HkaVd2Rv+BrwcrxKJDdzQ62sCzQjc33kO9CWIkymUmrgNSb5wFrfPkK0Y9QUUt4x9GTCDDUcVDRrTFAQtthVob/3I5GXUcr0O1wFtJRtmzqgXwnpyxU8nGB39bag0qLSd4uF5a23dReuBGzfxqqJQVulOFfbrZOouSs+D8y6QwYWJUfSaNzlUafBxOk/MAJL6E+Bgl0d7rETlSwb6lquAgg1ooZmir6pXgiGfJEKt/V8KPewHXe+AIfv3LpCmG3burYrk+J1gLonV1DucF3TrhsudQFYqgBKTzk5ABd8nPcQKQTuDhq5Un6U+gv6x7KL1IEppKdY1SKjjpUSRgNqTqEjEkHyy1U4dtVNGU39dg4nEorB884G2IAIiOJVhRb58812PHhAwn6JRDHHouV9LcgulZoapX9H3tmPaxrZt3Q08Nautjnnd+kepKcL+mmXgkTMkYpU6fPL29brN1cZH6jKmRLXp4eUps8CshbbBG0vCaat8V7BvAfKqUHwV8slcCEgf3hbixp9UwviCpRPgjFVL8ph9LJnUU6ElaaHdciktv+a1Nc84rGIMp/IJpYAxt11tgnaiBdb1ORRjfuSJgeGWxbYyB1RqEdD0ntTd7Ye6Kndxw=
+  distributions: "sdist bdist_wheel"
+  on:
+    python: 2.7
+    tags: true
+    all_branches: true

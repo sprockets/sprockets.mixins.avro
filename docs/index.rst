@@ -26,9 +26,7 @@ API Documentation
    api
    examples
 
-Version History
----------------
-.. include:: HISTORY.rst
+.. include:: ../HISTORY.rst
 
 Issues
 ------
